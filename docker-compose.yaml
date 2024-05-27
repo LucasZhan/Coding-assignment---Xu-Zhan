@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  python-app:
+    image: mongo-app:v1
+    container_name: python-app
+    #command: ["bash"]
+    depends_on:
+      - mongo
+    networks:
+      - etl_network
+
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    networks:
+      - etl_network
+    ports:
+      - "27017:27017"
+
+networks:
+  etl_network:
+    driver: bridge
