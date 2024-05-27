@@ -33,6 +33,7 @@ You can either save the output data in `JSON` format or save it to `MongoDB`.
 
 
 #### 2. Output the data to MongoDB
+***Note:During the process of saving data to MongoDB, port 27017 will be used by default. Make sure your 27017 port is available.***
 
 * Make sure you are in the local repository.
 
